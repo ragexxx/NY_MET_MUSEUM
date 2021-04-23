@@ -6,11 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tourists of New York MET MUSEUM</title>
     <link rel="stylesheet" href="./assets/css/style.css">
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
 </head>
 <header class="head1">
     <h1 class="">Welcome Visitors of New York MET MUSEUM</h1>
 </header>
-<body>
+<body class="min-100-vh flex-column">
 <div class="">
     <p class="">Everyone ineterested in visit the MET Museum can do a quick research of the artwork that can personally discover</p>
 </div>
@@ -33,8 +38,30 @@
           <button id="" type="submit" class="">Submit</button>
         </div>
       </form>
+
+      <form id="form">
+        <div class="form-group">
+            <label for="keyWordInput">Key word</label>
+            <input type="text" class="form-control" id="keyWordInput" placeholder="Example: stadium">
+          </div>
+        <div class="form-group">
+          <label for="exampleFormControlSelect1">Select cateogry</label>
+          <select class="form-control" id="formSelect">
+            <option id="interesting_places">Interesting places</option>
+            <option id="sport">Sport</option>
+            <option id="tourist_facilities">Tourist Facilities</option>
+            <option id="amusements">Amusements</option>
+            <option id="adult">Adult</option>
+            <option id="accomodations">Accomodations</option>
+          </select>
+        </div>
+        <input type="button" value="Submit" id="submitBtn">
+      </form>
+      <div id="results">
+      </div>
+
 </div>
-    
+<script src="./jsMiranda.js"></script>
 </body>
 <footer class="foot">
     <h3>Developed with ♥ by THE ARTISTS</h3>
