@@ -1,21 +1,5 @@
 var apiKey = "5ae2e3f221c38a28845f05b6f734f0898fda7d994da97dd93abd77db";
 
-/* $('#formSelect').change(function() {
-    var kind = $('option:selected').attr('id');
-    console.log(kind);
-    fetch("https://api.opentripmap.com/0.1/en/places/radius?radius=70000&lon=-73.9385&lat=40.6643&kinds="+kind+"&format=json&apikey="+apiKey, {
-      method: 'GET', //GET is the default.
-      credentials: 'same-origin', // include, *same-origin, omit
-      redirect: 'follow', // manual, *follow, error
-    })
-      .then(function (response) {
-        return response.json();
-      })
-      .then(function (data) {
-        console.log(data);
-      });
-}); */
-
 $("#submitBtn").click(function () {
   var kind = $("option:selected").attr("id");
   var keyWord = $("#keyWordInput").val();
@@ -53,7 +37,6 @@ $("#submitBtn").click(function () {
       }
 
       var i = 0;
-
       while (i < data.length || i == 30) {
         if (data[i].name != "") {
           var name = document.createElement("h3");
