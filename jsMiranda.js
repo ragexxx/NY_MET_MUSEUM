@@ -1,8 +1,10 @@
 var apiKey = "5ae2e3f221c38a28845f05b6f734f0898fda7d994da97dd93abd77db";
 
-$("#submitBtn").click(function () {
+$("#submitBtn").click(function (event) {
+  event.preventDefault();
   var kind = $("option:selected").attr("id");
   var keyWord = $("#keyWordInput").val();
+  console.log("hi");
 
   fetch(
     "https://api.opentripmap.com/0.1/en/places/autosuggest?name=" +
