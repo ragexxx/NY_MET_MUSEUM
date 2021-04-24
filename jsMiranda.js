@@ -33,7 +33,7 @@ $("#submitBtn").click(function (event) {
             var divalert = document.createElement("div");
             divalert.setAttribute("data-closable", "slide-out-right");
             divalert.setAttribute("class", "callout alert");
-            divalert.innerText = "Ups! Looks like we had no luck with your search, please try a new key word or category.";
+            divalert.innerText = "Ups! Looks like we had no luck with your search, please try a new key word or category..";
             var buttonAlert = document.createElement("button");
             buttonAlert.setAttribute("class", "close-button")
             buttonAlert.setAttribute("aria-label", "Dismiss alert");
