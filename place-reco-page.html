@@ -8,9 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation 5</title>
     <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="css/foundation.css">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./Assets/css/foundation.css">
+    <link rel="stylesheet" href="./Assets/css/app.css">
+    <link rel="stylesheet" href="./Assets/css/style.css">
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 
@@ -32,20 +33,27 @@
                 <form>
                     <div class="large-5 small-4 columns">
                         <label>
-                            <select>
-                                <option value="husker">Husker</option>
-                                <option value="starbuck">Starbuck</option>
-                                <option value="hotdog">Hot Dog</option>
-                                <option value="apollo">Apollo</option>
+
+                            <select class="form-control" id="formSelect">
+                                <option id="interesting_places">Interesting places</option>
+                                <option id="sport">Sport</option>
+                                <option id="tourist_facilities">Tourist Facilities</option>
+                                <option id="amusements">Amusements</option>
+                                <option id="adult">Adult</option>
+                                <option id="accomodations">Accomodations</option>
+
+                          
                             </select>
                         </label>
 
                     </div>
                     <div class="large-5 small-4 columns">
-                        <input type="text" />
+
+                        <input type="text" id="keyWordInput" placeholder="Example: stadium" />
                     </div>
                     <div class="large-2 small-3 columns">
-                        <a href="#" class="postfix button expand">Search</a>
+                        <button class="postfix button expand" id="submitBtn">Search</button>
+
                     </div>
 
                 </form>
@@ -59,57 +67,9 @@
             <div class="row grid-x grid-padding-x align-center-middle text-center">
                 <!--show Result List-->
                 <div class="row">
-                    <ul class="no-bullet">
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <h3 class="text-center">List of results</h3>
-                            </a>
-                        </li>
+
+                    <ul class="no-bullet" id="results">
+
                     </ul>
                 </div>
             </div>
@@ -137,10 +97,12 @@
 
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
-    <script src="js/vendor/jquery.js"></script>
-    <script src="js/vendor/what-input.js"></script>
-    <script src="js/vendor/foundation.js"></script>
-    <script src="js/app.js"></script>
+    <script src="./Assets/js/vendor/jquery.js"></script>
+    <script src="./Assets/js/vendor/what-input.js"></script>
+    <script src="./Assets/js/vendor/foundation.js"></script>
+    <script src="./Assets/js/app.js"></script>
+    <script src="./jsMiranda.js"></script>
+
 
     <!--   <script>
         $(document).foundation();
