@@ -23,13 +23,18 @@ $("#submitBtn").click(function (event) {
         return response.json();
       })
       .then(function (data) {
+        $("#nresults").empty();
         $("#results").empty();
+        $(".callout cell").empty();
         var results = document.createElement("h3");
         if (data.length >= 30) {
-          results.textContent = "Number of results: 30";
-          $("#results").append(results);
+          results.textContent = "Number of results: "+data.length;
+          $("#nresults").append(results);
         } else {
+          results.textContent = "Number of results: "+data.length;
+          $("#nresults").append(results);
           if (data.length == 0) {
+            results.textContent = "";
             var divalert = document.createElement("div");
             divalert.setAttribute("data-closable", "slide-out-right");
             divalert.setAttribute("class", "callout alert");
@@ -43,7 +48,7 @@ $("#submitBtn").click(function (event) {
             spanAlert.setAttribute("aria-hidden", "true");
             spanAlert.innerHTML = '&times;';
 
-            $("#results").append(divalert);
+            $("#nresults").append(divalert);
             $(".callout").append(buttonAlert);
             $(".close-button").append(spanAlert);
 
@@ -53,12 +58,19 @@ $("#submitBtn").click(function (event) {
         var i = 0;
         while (i < data.length || i == 30) {
           if (data[i].name != "") {
+            var divCallout = document.createElement("div");
+            divCallout.setAttribute("class", "callout cell");
+            divCallout.setAttribute("id", "callout-"+i);
             var name = document.createElement("h3");
-            name.textContent = "Name: " + data[i].name;
-            var ranking = document.createElement("p");
-            ranking.textContent = "Popularity ranking: " + data[i].rate;
-            $("#results").append(name);
-            $("#results").append(ranking);
+            name.textContent = data[i].name;
+           /*  var ranking = document.createElement("div");
+           ranking.textContent = "Popularity ranking: " + data[i].rate;  */
+            $("#results").append(divCallout);
+            $("#callout-"+i).append(name);
+            /*  $("#callout-"+i).append(ranking);  */
+            console.log("this is:--"+data[i].rate+"----"+i);
+            rankingIcon(data[i].rate,i); 
+            
           }
           i++;
         }
@@ -67,7 +79,7 @@ $("#submitBtn").click(function (event) {
   } else {
     /* alert('Please enter a city'); */
     var divalert = document.createElement("div");
-    divalert.setAttribute("data-closable", "");
+    divalert.setAttribute("data-closable", "slide-out-right");
     divalert.setAttribute("class", "callout alert");
     divalert.innerText = "Please enter a place";
     var buttonAlert = document.createElement("button");
@@ -79,9 +91,61 @@ $("#submitBtn").click(function (event) {
     spanAlert.setAttribute("aria-hidden", "true");
     spanAlert.innerHTML = '&times;';
 
-    $("#results").append(divalert);
+    $("#nresults").append(divalert);
     $(".callout").append(buttonAlert);
     $(".close-button").append(spanAlert);
 
   }
 });
+
+function rankingIcon(ranking,i) {
+  var div = document.createElement("div");
+  div.setAttribute("class", "glyph grid-x grid-margin-x");
+  div.setAttribute("id", "glyph-"+i);
+  var divNest = document.createElement("div");
+  divNest.setAttribute("class", "preview-glyphs cell");
+  divNest.setAttribute("id", "preview-glyphs-"+i);
+  divNest.innerText ="Ranking:"
+  $("#callout-"+i).append(div);
+  $("#glyph-"+i).append(divNest);
+
+  if(ranking>=1&&ranking<3){
+    for (var j = 0; j < 5; j++) {
+      star(i);
+      
+    }
+  }else if(ranking>=3&&ranking<5){
+    for (var j = 0; j < 4; j++) {
+      star(i);
+      
+    }
+  }else if(ranking>=5&&ranking<7){
+    for (var j = 0; j < 3; j++) {
+      star(i)
+      
+    }
+  }else if(ranking>=7&&ranking<9){
+    for (var j = 0; j < 2; j++) {
+      star(i)
+      
+    }
+  }else{
+    for (var j = 0; j < 1; j++) {
+      star(i)
+      
+    }
+  }
+
+
+
+}
+
+function star(i) {
+  
+  var iEl = document.createElement("i");
+  iEl.setAttribute("class", "step fi-star size-24");
+  $("#preview-glyphs-"+i).append(iEl);
+
+
+  
+}
