@@ -1,0 +1,27 @@
+.head1 {
+    padding: 6em 0;
+    background-image: url("../img/MET.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color:gray;
+}
+
+  .foot {
+    padding: 20px 0;
+    text-align: center;
+    background-color: #3a78d4;
+    text-decoration: none;
+  }
+  
+  .foot a {
+    color: #ffffff;
+  }
+
+  .details > li {
+    display: inline-block;
+    margin: 0 5px;
+  }
+
+  .close-button {
+    position: revert;
+  }
