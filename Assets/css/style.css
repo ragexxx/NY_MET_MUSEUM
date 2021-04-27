@@ -1,20 +1,26 @@
-.head1 {
-    padding: 6em 0;
-    background-image: url("../img/MET.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    color:gray;
+
+body{
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
+header{
+  background-color: #2ba6cb;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  
+  height: 10rem;
+  margin-bottom: 1rem;
+  background-image: url("../img/backgroundimage.jpg");
+}
   .foot {
     padding: 20px 0;
     text-align: center;
-    background-color: #3a78d4;
+    background-image: url("../img/backgroundimage.jpg");
     text-decoration: none;
   }
   
   .foot a {
-    color: #ffffff;
+    color: #00090c;
   }
 
   .details > li {
@@ -30,10 +36,36 @@
     /* border-bottom: 1px dotted #ccc; */
     padding: 10px 0 20px;
     margin-bottom: 20px;
+    
+  }
+  i{
+    color:#2ba6cb;
+  }
+
+  .callout{
+    background-color:#d2ebf3 ;
+    border: 2px solid #2ba6cb;
   }
 
   .preview-glyphs { vertical-align: bottom; } 
 
+  
+  h1{
+    font-family: 'Open Sans Condensed', sans-serif;
+    
+  }
+  
+  h2,h3{
+    font-family: 'Rokkitt', serif;
+  }
+  
+  h4,h5{
+    font-family: 'Oranienbaum', serif
+  }
+  
+  h6,p{
+    font-family: 'Pacifico', cursive;
+  }
   
 
   .step {

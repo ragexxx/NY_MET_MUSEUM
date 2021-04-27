@@ -2,88 +2,89 @@
 <html class="lt-ie10" lang="en" >
 <html class="no-js" lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <!-- If you delete this meta tag World War Z will become a reality -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foundation 5</title>
-    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
-    <link rel="stylesheet" href="Assets/css/foundation.css">
-    <link rel="stylesheet" href="Assets/css/app.css">
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
-
-
-    <!-- data-interchange="[Assets/img/MET-800x800.jpg, small], [Assets/img/MET-800x800.jpg, medium], [Assets/img/MET-800x800.jpg, large]" -->
-</head>
+    <head>
+        <meta charset="utf-8">
+        <!-- If you delete this meta tag World War Z will become a reality -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>MET Info for Tourists</title>
+        <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+        <link rel="stylesheet" href="Assets/css/foundation.css">
+        <link rel="stylesheet" href="Assets/css/app.css">
+        <link rel="stylesheet" href="Assets/css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oranienbaum&family=Pacifico&family=Rochester&family=Rokkitt&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="./css/style.css"> -->
+    
+    
+        <!-- data-interchange="[Assets/img/MET-800x800.jpg, small], [Assets/img/MET-800x800.jpg, medium], [Assets/img/MET-800x800.jpg, large]" -->
+    </head>
 
 <br>
 <br>
 
 <body>
-    
     <!-- Header -->
     <header class="row grid-x grid-padding-x align-center-middle text-center">
         <h1>Welcome Visitors of New York MET MUSEUM</h1>
     </header>
     <!-- Header -->
 
-    <main class="row ">
+    <main class="row">
         <div class="large-12 columns">
             <br>
             <!--Search MET-->
             <div class="row ">
                 <div class="large-12 columns grid-x grid-padding-x align-center-middle">
-                    
-                        <form>
-                            <div class="row collapse">
-                                <div class="large-10 small-8 columns">
-                                    <input type="text" />
-                                </div>
-                                <div class="large-2 small-3 columns">
-                                    <a href="#" class="postfix button expand">Search</a>
-                                </div>
+
+                    <form id="search-form">
+                        <div class="row collapse">
+                            <div class="large-10 small-8 columns">
+                                <input type="text" id="search-input" />
                             </div>
-                        </form>
-                    
+                            <div class="large-2 small-3 columns">
+                                <button href="#" class="postfix button expand">Search</button>
+                            </div>
+                        </div>
+                    </form>
+
                 </div>
 
                 <hr />
                 <br>
 
                 <!--show the info-->
-                <div class="row grid-x grid-padding-x align-center-middle">
+                <div class='display-block'>
+                    <!-- <div class="row grid-x grid-padding-x align-center-middle"> -->
                     <!--show Result List-->
-                    <div class="large-5 columns center">
+                    <div class="large-5 columns justify width-25" id="result-content">
+                        <br>
+                        <br>
                         <div class="row">
-                            <ul class="no-bullet">
+                            <ul class="margin-right-50">
                                 <li>
                                     <a href="#">
-                                        <h3 class="text-center">List of results</h3>
+                                        <h3 class="text-justify text-wrap" id="item1"></h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <h3 class="text-center">List of results</h3>
+                                        <h3 class="text-justify text-wrap" id="item2"></h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <h3 class="text-center">List of results</h3>
+                                        <h3 class="text-justify text-wrap" id="item3"></h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <h3 class="text-center">List of results</h3>
+                                        <h3 class="text-justify text-wrap" id="item4"></h3>
                                     </a>
                                 </li>
                                 <li>
                                     <a href="#">
-                                        <h3 class="text-center">List of results</h3>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <h3 class="text-center">List of results</h3>
+                                        <h3 class="text-justify text-wrap" id="item5"></h3>
                                     </a>
                                 </li>
                             </ul>
@@ -93,45 +94,68 @@
                     </div>
 
                     <!--show Name, Description and Image-->
-                    <div class="large-7 columns">
+
+
+
+
+
+                    <!-- t4est-->
+
+                    <h3 id='artwork_name'></h3>
+                    <div class="media-object stack-for-small row">
+                        
+                        <div class="media-object-section height-50" id="descr">
+                            <h4 >Description</h4>
+                            <br>
+                            <h6 id='artwork_info'></h6>
+                        </div>
+                        <div class="media-object-section">
+                            <div class="thumbnail">
+                                <img id='artwork_img' src="..">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ORIGINAL-->
+                    <!--  <div class="large-7 columns">
                         <div class="columns center">
-                            <h2 class="show-for-small ">Name</h2>
+                            <h3 class="show-for-small" id="artwork_name"></h3>
                         </div>
                         <br>
                         <br>
                         <div class="row">
-                            <div class="large-6 columns">
+                            <div class="large-7 columns">
                                 <div class="callout">
                                     <h5>Description</h5>
-                                    <h6 class="subheader">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Placeat quia quaerat modi soluta consequatur, similique praesentium, iusto accusantium, beatae delectus repellat aliquam amet recusandae aut odio a ullam reiciendis sapiente.</h6>
+                                    <h6 class="subheader" id="artwork_info"></h6>
                                 </div>
                             </div>
-                            <div class="large-6 columns">
-                                <div class="callout  ">
-                                    <img class="align-center-middle" src="./Assets/img/MET.jpg"><br>
+                            <div class="large-5 columns">
+                                <div class="callout grid-x grid-padding-x align-center-middle  ">
+                                    <img class="align-center-middle" src="" id="artwork_img"><br>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                </div>
+                </div> -->
 
-                <!-- Search Recommendation -->
-                <br />
-                <hr />
-                <div class="row">
+                    <!-- Search Recommendation -->
+                    <br />
+                    <hr />
+                    <div class="row">
 
-                    <div class="large-12 columns">
-                        <div class="grid-x grid-padding-x align-center-middle text-center">
-                            <div class="cell small-12 align-self-middle">
-                                <h5>Are you done with the MET?</h2>
-                                <h5>Looking for something new to do!</h2>
-                                <a href="#" class="postfix button expand">Search</a>
+                        <div class="large-12 columns">
+                            <div class="grid-x grid-padding-x align-center-middle text-center">
+                                <div class="cell small-12 align-self-middle">
+                                    <h5>Are you done with the MET?</h2>
+                                        <h5>Looking for something new to do!</h2>
+                                            <a href="#" class="postfix button expand">Search</a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
     </main>
 
     <!-- Footer -->
@@ -151,14 +175,15 @@
     </footer>
     <!-- End Footer -->
 
-    
-  
+
+
+    <script src="Assets/js/METSearchscript.js"></script>
     <script src="Assets/js/vendor/jquery.js"></script>
     <script src="Assets/js/vendor/what-input.js"></script>
     <script src="Assets/js/vendor/foundation.js"></script>
     <script src="Assets/js/app.js"></script>
 
-  <!--   <script>
+    <!--   <script>
         $(document).foundation();
     </script> -->
 </body>

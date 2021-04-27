@@ -37,7 +37,7 @@ $("#submitBtn").click(function (event) {
             results.textContent = "";
             var divalert = document.createElement("div");
             divalert.setAttribute("data-closable", "slide-out-right");
-            divalert.setAttribute("class", "callout alert");
+            divalert.setAttribute("class", "callout primary");
             divalert.innerText = "Ups! Looks like we had no luck with your search, please try a new key word or category..";
             var buttonAlert = document.createElement("button");
             buttonAlert.setAttribute("class", "close-button")
@@ -80,7 +80,7 @@ $("#submitBtn").click(function (event) {
     /* alert('Please enter a city'); */
     var divalert = document.createElement("div");
     divalert.setAttribute("data-closable", "slide-out-right");
-    divalert.setAttribute("class", "callout alert");
+    divalert.setAttribute("class", "callout primary");
     divalert.innerText = "Please enter a place";
     var buttonAlert = document.createElement("button");
     buttonAlert.setAttribute("class", "close-button")
