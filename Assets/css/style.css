@@ -96,4 +96,18 @@ header{
   .size-72 { font-size: 72px; }
   
 
-  
+  .media-object-section {
+    border: 2px solid #2ba6cb;
+    background-color: #d2ebf3;
+    margin-right: 2rem;
+    margin-left: 3rem;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-right: 1rem;
+  }
+
+  #result-content{
+    margin-right: 2rem;
+  }
+
