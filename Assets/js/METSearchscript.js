@@ -1,7 +1,8 @@
-var searchFormEl = document.querySelector("#search-form");
-var resultTextEl = document.querySelector("#result-text");
-var resultContentEl = document.querySelector("#result-content");
-var mediaSection = document.querySelector(".media-object-section");
+var searchFormEl = document.querySelector('#search-form');
+var resultTextEl = document.querySelector('#result-text');
+var resultContentEl = document.querySelector('#result-content');
+var mediaSection = document.querySelector('.media-object-section');
+var mediaObject = document.querySelector('.media-object')
 var list = document.querySelector("ul");
 var image = document.querySelector(".thumbnail");
 var searchLocation = document.querySelector("#location-search");
@@ -16,6 +17,7 @@ function initialize() {
 
   searched = JSON.parse(localStorage.getItem("searched")) || [];
   displaySearch();
+
 }
 
 //Rendering of todos written
@@ -177,10 +179,12 @@ function displayData() {
 }
 
 function artInfo(i) {
-  $("#item" + [i]).on("click", function () {
-    mediaSection.style.opacity = "100";
-    image.style.opacity = "100";
-    $("#content-section").empty();
+  $("#item"+[i]).on('click', function () {
+    mediaSection.style.opacity="100";
+    image.style.opacity="100";
+    mediaObject.style.opacity="100";
+    $('#content-section').empty();
+
     if (datainfo.length >= 1) {
       var title = datainfo[i].title;
       var name = datainfo[i].name;
