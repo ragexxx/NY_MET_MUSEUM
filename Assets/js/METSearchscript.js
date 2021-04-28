@@ -86,7 +86,8 @@ function getName(id, i, datalength) {
       return response.json();
     })
     .then(function (data) {
-
+      let { title } = data;
+      title = title.split(',')[0];
       art = {
         title: data.title,
         name: data.artistDisplayName,
