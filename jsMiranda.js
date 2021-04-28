@@ -1,4 +1,5 @@
 var apiKey = "5ae2e3f221c38a28845f05b6f734f0898fda7d994da97dd93abd77db";
+var searchLocation = document.querySelector("#location-search");
 
 $("#submitBtn").click(function (event) {
   event.preventDefault();
@@ -149,3 +150,10 @@ function star(i) {
 
   
 }
+
+var URLactual = location.pathname;
+
+$("#backBtn").click(function(){
+  location.assign('./met-page.html');
+  URLactual = location.pathname;
+});
