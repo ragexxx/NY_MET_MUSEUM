@@ -5,6 +5,7 @@ var mediaSection = document.querySelector('.media-object-section');
 var mediaObject = document.querySelector('.media-object')
 var list = document.querySelector("ul");
 var image = document.querySelector(".thumbnail");
+var mediaObject = document.querySelector('.media-object')
 var searchLocation = document.querySelector("#location-search");
 var searched = [];
 
@@ -14,7 +15,7 @@ function initialize() {
   mediaSection.style.opacity = "0";
   list.style.opacity = "0";
   image.style.opacity = "0";
-
+  mediaObject.style.opacity="0";
   searched = JSON.parse(localStorage.getItem("searched")) || [];
   displaySearch();
 
