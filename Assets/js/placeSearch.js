@@ -29,7 +29,7 @@ $("#submitBtn").click(function (event) {
         $(".callout cell").empty();
         var results = document.createElement("h3");
         if (data.length >= 30) {
-          results.textContent = "Number of results: "+data.length;
+          results.textContent = "Number of results: 30";
           $("#nresults").append(results);
         } else {
           results.textContent = "Number of results: "+data.length;
@@ -57,7 +57,7 @@ $("#submitBtn").click(function (event) {
         }
 
         var i = 0;
-        while (i < data.length || i == 30) {
+        while (i < data.length && i < 30) {
           if (data[i].name != "") {
             var divCallout = document.createElement("div");
             divCallout.setAttribute("class", "callout cell");
