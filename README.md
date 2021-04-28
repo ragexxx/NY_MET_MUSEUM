@@ -11,11 +11,11 @@ _This application was developed for a common tourist that wants to visit the New
 
 ## Instructions 🚀
 
-1. Search for an artwork in NY MET Museum
+`1. Search for an artwork in NY MET Museum`
 * You can search an artwork in the New York Met Museum just type your search by the followin types: 
-    * Name of the Artist 
-    * Name of the Artwork  
-    * Topic of the Artwork
+    * `Name of the Artist` 
+    * `Name of the Artwork` 
+    * `Topic of the Artwork`
 
     ![Search:](./Assets/img/search.gif)
 
@@ -29,7 +29,7 @@ _This application was developed for a common tourist that wants to visit the New
 
 \
 &nbsp;
-2. Search for interesting places near the museum
+`2. Search for interesting places near the museum`
 * You can search for interesting places for visitting after going to the museum, just select the search button in the middle of the page like this:
     ![Search:](./Assets/img/search2.gif)
 * The available results will be displayed, you can see the name of the place, and the ranking:
@@ -46,29 +46,29 @@ _No installation neccesary for this project._
 \
 &nbsp;
 ### Build with 🛠️
-* [Jquery](https://jquery.com/) - Javascript Library
-* [CSS Foundation Framework](https://get.foundation/) - CSS Advanced Framework
-* [API - MET API](https://metmuseum.github.io/) - The Metropolitan Museum of Art Collection API
-* [API - OpenTripMap](https://opentripmap.io/product) - OpenTripMap API
+* [Jquery](https://jquery.com/) - `Javascript Library`
+* [CSS Foundation Framework](https://get.foundation/) - `CSS Advanced Framework`
+* [API - MET API](https://metmuseum.github.io/) - `The Metropolitan Museum of Art Collection API`
+* [API - OpenTripMap](https://opentripmap.io/product) - `OpenTripMap API`
 \
 &nbsp;
 ### Links ❔
-* [GITHUB Repository](https://github.com/ragexxx/NY_MET_MUSEUM) - NY MET MUSEUM REPOSITORY
-* [Live URL - Github Pages](https://ragexxx.github.io/NY_MET_MUSEUM/) - NY MET Webpage
+* [GITHUB Repository](https://github.com/ragexxx/NY_MET_MUSEUM) - `NY MET MUSEUM REPOSITORY`
+* [Live URL - Github Pages](https://ragexxx.github.io/NY_MET_MUSEUM/) - `NY MET Webpage`
 \
 &nbsp;
 ## Authors ✒️
 *THE ARTISTS TEAM:*
-* **Yazmin Tinoco**   - [Yazmin30-bot](https://github.com/Yazmin30-bot/)
-* **Alsynoe Arista**  - [alarista](https://github.com/alarista/)
-* **Miranda Ramirez** - [mirandarmz](https://github.com/mirandarmz/)
-* **Rigel Trujillo**  - [ragexxx](https://github.com/ragexxx/)
+* **`Yazmin Tinoco`**   - [Yazmin30-bot](https://github.com/Yazmin30-bot/)
+* **`Alsynoe Arista`**  - [alarista](https://github.com/alarista/)
+* **`Miranda Ramirez`** - [mirandarmz](https://github.com/mirandarmz/)
+* **`Rigel Trujillo`**  - [ragexxx](https://github.com/ragexxx/)
 \
 &nbsp;
 ## Special Thanks 🎁
-* Tyler Sensei 👨‍🏫
-* Emily Master 👩‍🏫 
-* BOOTCAMP 🎒
+* `Tyler Sensei` 👨‍🏫
+* `Emily Master` 👩‍🏫 
+* `BOOTCAMP` 🎒
 
 
 
