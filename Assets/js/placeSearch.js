@@ -1,8 +1,17 @@
 var apiKey = "5ae2e3f221c38a28845f05b6f734f0898fda7d994da97dd93abd77db";
 var searchLocation = document.querySelector("#location-search");
-
+var calloutEle = document.querySelector("#results");
+var nCalloutEle = document.querySelector("h2")
 $("#submitBtn").click(function (event) {
   event.preventDefault();
+  calloutEle.style.opacity = "0";
+  if(nCalloutEle){
+    nCalloutEle.style.opacity = "0";
+  }
+  if(results){
+    results.textContent = "";
+  }
+ 
   var kind = $("option:selected").attr("id");
   var keyWord = $("#keyWordInput").val();
   if (keyWord) {
@@ -27,12 +36,12 @@ $("#submitBtn").click(function (event) {
         $("#nresults").empty();
         $("#results").empty();
         $(".callout cell").empty();
-        var results = document.createElement("h3");
+        var results = document.createElement("h2");
         if (data.length >= 30) {
           results.textContent = "Number of results: 30";
           $("#nresults").append(results);
         } else {
-          results.textContent = "Number of results: "+data.length;
+          //results.textContent = "Number of results: "+data.length;
           $("#nresults").append(results);
           if (data.length == 0) {
             results.textContent = "";
@@ -59,6 +68,9 @@ $("#submitBtn").click(function (event) {
         var i = 0;
         while (i < data.length && i < 30) {
           if (data[i].name != "") {
+            calloutEle.style.opacity = "100";
+           /*  nCalloutEle.style.opacity = "100"; */
+           results.textContent = "Number of results: "+data.length;
             var divCallout = document.createElement("div");
             divCallout.setAttribute("class", "callout cell");
             divCallout.setAttribute("id", "callout-"+i);
@@ -79,6 +91,8 @@ $("#submitBtn").click(function (event) {
       });
   } else {
     /* alert('Please enter a city'); */
+    $("h2").empty();
+    results.style.opacity = "0";
     var divalert = document.createElement("div");
     divalert.setAttribute("data-closable", "slide-out-right");
     divalert.setAttribute("class", "callout primary");
