@@ -7,6 +7,8 @@ var list = document.querySelector("ul");
 var image = document.querySelector(".thumbnail");
 var mediaObject = document.querySelector('.media-object')
 var searchLocation = document.querySelector("#location-search");
+var titleElement = document.querySelector("#artwork_name");
+var imageDiv = document.querySelector(".stack-for-small");
 var searched = [];
 
 initialize();
@@ -16,6 +18,8 @@ function initialize() {
   list.style.opacity = "0";
   image.style.opacity = "0";
   mediaObject.style.opacity="0";
+  titleElement.style.opacity="0";
+  imageDiv.style.opacity="0";
   searched = JSON.parse(localStorage.getItem("searched")) || [];
   displaySearch();
 
@@ -48,7 +52,9 @@ function displaySearch() {
 function handleSearch(event) {
   event.preventDefault();
   var searchInputVal = document.querySelector("#search-input").value;
-
+  mediaObject.style.opacity="0";
+  titleElement.style.opacity="0";
+  imageDiv.style.opacity="0";
   if (!searchInputVal) {
     list.style.opacity="0";
     var divalert = document.createElement("div");
@@ -65,7 +71,7 @@ function handleSearch(event) {
     spanAlert.setAttribute("aria-hidden", "true");
     spanAlert.innerHTML = "&times;";
 
-    $("#result-content").append(divalert);
+    $("#alert-content").append(divalert);
     $(".callout").append(buttonAlert);
     $(".close-button").append(spanAlert);
     return;
@@ -107,23 +113,26 @@ function searchApi(query) {
       console.log(data);
       if (data.objectIDs == null || data === NaN || data.length == 0) {
         list.style.opacity="0";
-        var divalert = document.createElement("div");
-        divalert.setAttribute("data-closable", "slide-out-right");
-        divalert.setAttribute("class", "callout primary");
-        divalert.innerText =
-          "Ups! Looks like we had no luck with your search, please try a new key word or category..";
-        var buttonAlert = document.createElement("button");
-        buttonAlert.setAttribute("class", "close-button");
-        buttonAlert.setAttribute("aria-label", "Dismiss alert");
-        buttonAlert.setAttribute("type", "button");
-        buttonAlert.setAttribute("data-close", "");
-        var spanAlert = document.createElement("span");
-        spanAlert.setAttribute("aria-hidden", "true");
-        spanAlert.innerHTML = "&times;";
+        titleElement.style.opacity="0";
+        imageDiv.style.opacity="0";
+
+
+        var divalert2 = document.createElement("div");
+        divalert2.setAttribute("data-closable", "slide-out-right");
+        divalert2.setAttribute("class", "callout primary");
+        divalert2.innerText ="Ups! Looks like we had no luck with your search, please try a new key word or category..";
+        var buttonAlert2 = document.createElement("button");
+        buttonAlert2.setAttribute("class", "close-button");
+        buttonAlert2.setAttribute("aria-label", "Dismiss alert");
+        buttonAlert2.setAttribute("type", "button");
+        buttonAlert2.setAttribute("data-close", "");
+        var spanAlert2 = document.createElement("span");
+        spanAlert2.setAttribute("aria-hidden", "true");
+        spanAlert2.innerHTML = "&times;";
     
-        $("#result-content").append(divalert);
-        $(".callout").append(buttonAlert);
-        $(".close-button").append(spanAlert);
+        $("#alert-content").append(divalert2);
+        $(".callout").append(buttonAlert2);
+        $(".close-button").append(spanAlert2);
         return;
       } else {
         var i = 0;
@@ -184,6 +193,7 @@ function artInfo(i) {
     mediaSection.style.opacity="100";
     image.style.opacity="100";
     mediaObject.style.opacity="100";
+    titleElement.style.opacity="100";
     $('#content-section').empty();
 
     if (datainfo.length >= 1) {
